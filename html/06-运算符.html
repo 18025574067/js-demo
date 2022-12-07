@@ -31,10 +31,10 @@
                 2. boolean: true转换为1, false转换为0.
 
             * 其他类型转换为boolean.
-                1. string: 空字符转为false, 其他的字符串转为true
-                2. number: 0和NaN转为false, 其他的数字转为true
-                3. null
-                4. undefined
+                1. number: 0和NaN转为false, 其他的数字转为true
+                2. string: 空字符转为false, 其他的字符串转为true
+                3. null: 转为false
+                4. undefined: 转为false.
 
     */
     var str = "20";
@@ -54,14 +54,24 @@
     var flag = 1;
     var flag = '';
     var flag = 'abc';
-    if(flag){
+    var flag = null;
+    var flag = undefined;
+<!--    if(flag){
+        alert("转换为true");
+    }else{
+        alert('转换为false');
+    }-->
+
+
+
+    // 健壮性判断
+    var str = "abc";
+<!--    if(str != null && str.length > 0){-->
+    if(str){
         alert("转换为true");
     }else{
         alert('转换为false');
     }
-
-
-
 
 
 
