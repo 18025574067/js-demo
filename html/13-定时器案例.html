@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器案例</title>
+</head>
+<body>
+
+<input type="button" onclick="on()" value="开灯">
+<img  id="myImage" border="0" src="../imgs/off.png" style="text-align:center;">
+<input type="button" onclick="off()" value="关灯">
+
+<script>
+    function on(){
+        document.getElementById("myImage").src=""../imgs/on.png;
+    }
+
+    function off(){
+        document.getElementById("myImage").src="../imgs/off.png";
+    }
+</script>
+</body>
+</html>
