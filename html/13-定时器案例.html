@@ -18,6 +18,19 @@
     function off() {
         document.getElementById('myImage').src="../img/off.png"
     }
+
+    // 根据一个变化的值，产生固定个数的值： 2: x % 2    3: x % 3 以此类推。
+    // 定时器
+    var x = 0;
+    setInterval(function (){
+        if(x % 2 == 0){
+            on();
+        }else{
+            off();
+        }
+        x ++;
+    }, 1000);
+
 </script>
 
 </body>
