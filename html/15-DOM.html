@@ -6,20 +6,13 @@
 </head>
 <body>
 
-
 <img id="light" src="../imgs/off.png"><br>
-
-
-
 <div class="cls">传智教育</div>
 <div class="cls">黑马程序员</div>
-
 <input type="checkbox" name="hobby">电影
 <input type="checkbox" name="hobby">旅游
 <input type="checkbox" name="hobby">游戏
 <br>
-
-
 
 <script>
     /*
@@ -44,11 +37,15 @@
     // 3. getElementByName: 根据name属性值获取，返回Element对象数组
     var hobbys = document.getElementsByName('hobby');
     //alert(hobbys.length);
-    for(let i = 0; i < hobbys.length; i ++){
+    /* for(let i = 0; i < hobbys.length; i ++){
         alert(hobbys[i]);
+    } */
+
+    // 4. getElementByClassName: 根据class属性值获取，返回Element对象数组。
+    var clss = document.getElementsByClassName("cls");
+    for(let i = 0; i < clss.length; i ++){
+        alert(clss[i]);
     }
-
-
 </script>
 </body>
 </html>
