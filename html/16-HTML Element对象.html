@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<img id="light" src="../imgs/off.png"><br>
+
+<div class="cls">传智教育</div>
+<div class="cls">黑马程序员</div>
+
+<input type="checkbox" name="hobby">电影
+<input type="checkbox" name="hobby">旅游
+<input type="checkbox" name="hobby">游戏
+<br>
+
+<script>
+    /*
+        获取：使用Document对象的方法来获取。
+            getElementById: 根据id属性值获取对象，返回一个Element对象
+            getElementByTagName: 根据标签名称获取，返回Element对象数组
+            getElementByName: 根据name属性值获取，返回Element对象数组
+            getElementByClassName: 根据class属性值获取，返回Element对象数组。
+    */
+
+    // 1. getElementById: 根据id属性值获取对象，返回一个Element对象
+    var img = document.getElementById("light");
+    //alert(img);
+    img.src = "../imgs/on.png";
+
+    // 2. getElementByTagName: 根据标签名称获取，返回Element对象数组
+    var divs = document.getElementsByTagName("div");
+    /*
+        style: 设置元素css样式
+        innerHTML: 设置元素内容
+    */
+    for(let i = 0; i < divs.length; i ++){
+        divs[i].style.color = "green";
+    }
+
+    //alert(divs.length);
+    /* for(let i = 0; i < divs.length; i ++){
+        alert(divs[i]);
+    } */
+
+    // 3. getElementByName: 根据name属性值获取，返回Element对象数组
+    var hobbys = document.getElementsByName('hobby');
+    //alert(hobbys.length);
+    /* for(let i = 0; i < hobbys.length; i ++){
+        alert(hobbys[i]);
+    } */
+
+    // 4. getElementByClassName: 根据class属性值获取，返回Element对象数组。
+    /* var clss = document.getElementsByClassName("cls");
+    for(let i = 0; i < clss.length; i ++){
+        alert(clss[i]);
+    } */
+</script>
+
+</body>
+</html>
