@@ -37,7 +37,7 @@
         innerHTML: 设置元素内容
     */
     for(let i = 0; i < divs.length; i ++){
-        //divs[i].style.color = "green";
+        divs[i].style.color = "green";
         divs[i].innerHTML = "HELLO WORLD";
     }
 
@@ -49,9 +49,9 @@
     // 3. getElementByName: 根据name属性值获取，返回Element对象数组
     var hobbys = document.getElementsByName('hobby');
     //alert(hobbys.length);
-    /* for(let i = 0; i < hobbys.length; i ++){
-        alert(hobbys[i]);
-    } */
+    for(let i = 0; i < hobbys.length; i ++){
+        hobbys[i].checked = true;
+    }
 
     // 4. getElementByClassName: 根据class属性值获取，返回Element对象数组。
     /* var clss = document.getElementsByClassName("cls");
