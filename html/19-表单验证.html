@@ -56,6 +56,14 @@
 // 1.1 获取用户名的输入框
 var usernameInput = document.getElementById("username");
 
+// 1.2 绑定onblur事件，失去焦点
+usernameInput.onblur = function(){
+    // 获取用户输入的用户名
+    var username = usernameInput.value.trim();
+    alert(username);
+
+}
+
 
 
 </script>
