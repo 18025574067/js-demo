@@ -52,18 +52,44 @@
     </form>
 </div>
 <script>
+
+
 // 1. 验证用户名是否符合规则
 // 1.1 获取用户名的输入框
 var usernameInput = document.getElementById("username");
 
 // 1.2 绑定onblur事件，失去焦点
 usernameInput.onblur = function(){
-    // 获取用户输入的用户名
+    // 1.3 获取用户输入的用户名
     var username = usernameInput.value.trim();
-    alert(username);
-
+    // 1.4 判断用户名是否符合规则 6-12位
+    if(username.length >= 6 && username.length <= 12){
+        // 符合规则
+        document.getElementById("username_err").style.display = "None";
+    }else{
+        // 不符合规则
+        document.getElementById("username_err").style.display = "";
+    }
 }
 
+   
+// 1. 验证密码是否符合规则
+// 1.1 获取密码的输入框
+var passwordInput = document.getElementById("password");
+
+// 1.2 绑定onblur事件，失去焦点
+passwordInput.onblur = function(){
+    // 1.3 获取用户输入的密码
+    var password = passwordInput.value.trim();
+    // 1.4 判断密码是否符合规则 6-12位
+    if(password.length >= 6 && password.length <= 12){
+        // 符合规则
+        document.getElementById("password_err").style.display = "None";
+    }else{
+        // 不符合规则
+        document.getElementById("password_err").style.display = "";
+    }
+}
 
 
 </script>
